@@ -1,0 +1,1 @@
+{\n  "version": 2,\n  "builds": [\n    { "src": "API/*.js", "use": "@vercel/node" }\n  ],\n  "routes": [\n    { "handle": "filesystem" },\n    { "src": "^/api/(.*)$", "dest": "/API/$1.js" },\n    { "src": "^/uploads/(.*)$", "dest": "/public/uploads/$1" },\n    { "src": "/(.*)", "dest": "/index.html" }\n  ]\n}
